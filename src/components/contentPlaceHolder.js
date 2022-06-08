@@ -25,6 +25,7 @@ const card = ()=> {
 </h3>
 <p class="card-excerpt" id="excerpt">
   &nbsp;
+{/* comment added*/}
   <span class="animated-bg animated-bg-text">&nbsp;</span>
   <span class="animated-bg animated-bg-text">&nbsp;</span>
   <span class="animated-bg animated-bg-text">&nbsp;</span>
