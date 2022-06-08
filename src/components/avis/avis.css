@@ -1,0 +1,10 @@
+#container-card{
+	background: rgb(34,193,195);
+background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#14136d",GradientType=1);
+
+/*border-radius: 73% 27% 30% 70% / 48% 38% 62% 52%;*/
+
+}

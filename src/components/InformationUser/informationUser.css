@@ -1,0 +1,65 @@
+.contenairInf {
+  background-color: #447c73be;
+  border-radius: 5px;
+  padding: 20px;
+  opacity: 0.5;
+  margin: 30px;
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  color: #000 !important;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rightbarTitle {
+  margin-bottom: 20px;
+}
+
+.rightbarInfo {
+  margin-bottom: 30px;
+  text-align: start;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media all and (min-width: 500px) {
+  .rightbarInfo {
+    margin-bottom: 30px;
+    text-align: start;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contenairInf {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    opacity: 0.5;
+    margin: 30px;
+    text-align: center;
+    font-family: "poppins", sans-serif;
+    font-size: 20px;
+    color: #000 !important;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.rightbarInfoItem {
+  margin-bottom: 10px;
+}
+
+.rightbarInfoKey {
+  color: #000000 !important;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.rightbarInfoValue {
+  font-weight: 300;
+}

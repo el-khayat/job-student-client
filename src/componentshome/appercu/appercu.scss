@@ -1,0 +1,52 @@
+.appercu{
+    background-color: rgba(255, 254, 254, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 170vh !important;
+    padding: 100px;
+
+.titre{
+    font-size: 60px;
+          margin: 10px 0;
+          font-style: oblique;
+}
+
+}
+.testimonials
+{
+    width: 500px;
+    height: 200px;
+    /*
+    background: rgb(34,193,195);
+background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(20,19,109,0.9230769073570168) 95%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#14136d",GradientType=1);
+*/
+
+    border-radius: 5px;
+    padding: 20px;
+
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+
+    
+}
+.img{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+
+}
+.lead {
+    color : rgba(8, 15, 109, 0.6) !important
+}
+.titre{
+    text-align: center;
+    font-family: 'Rubik Moonrocks', cursive;
+}

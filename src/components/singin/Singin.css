@@ -1,0 +1,19 @@
+.singin{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin-top: 20%;
+}
+.logoSvg{
+    height: 100%;
+    width: 100%;
+}
+@media  all and (max-width: 750px)  {
+    .logoLogin{
+        display: none;
+    }
+}
+
+.backgroundLigner{
+    background: rgba(0,0,0,0) linear-gradient(135deg,#ededed 0,#26acd4 100%) repeat scroll 0 0;
+}

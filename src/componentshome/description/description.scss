@@ -1,0 +1,56 @@
+.intro {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  
+
+    .left {
+      flex: 0.4;
+      
+  
+      .imgContainer {
+        width: 90%;
+        height: 90%;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        
+  
+        
+  
+      }
+    }
+    .right {
+      flex: 0.5;
+      width: 100%;
+      position: relative;
+      .titree{
+        font-size: 40px;
+        font-style: oblique;
+
+      span {
+        font-size: inherit;
+        color: crimson;
+      }
+    }
+
+  
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        letter-spacing: 1px;
+  
+        
+      }
+      
+    }
+  }
+

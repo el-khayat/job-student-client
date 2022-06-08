@@ -1,0 +1,56 @@
+/* style={{
+    width : "80%",
+    height : 300,
+    backgroundColor : "red",
+    marginLeft : "auto",
+    marginRight : "auto",
+    display:"flex",
+    
+  }} */
+  .buttons{
+      width: 80%;
+      height : 300px ;
+      background-color: rgba(155, 240, 224, 0.321);
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      padding: 10px;
+      border-radius: 7px;
+   
+
+  }
+  .btn-post{
+      display: flex;
+      width: 45%;
+      height: 90%;
+      justify-content: center;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 5px;
+      background-color: rgb(151, 242, 212);
+        color: rgb(213, 132, 25);
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      
+  }
+  .btn-post:hover{
+      display: flex;
+      width: 45%;
+      height: 90%;
+      justify-content: center;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 5px;
+      /* color: rgb(151, 242, 212) ; */
+      padding: 10px;
+      font-size: 20px;
+      
+  }
+
+a:hover{
+    text-decoration: none;
+
+  }
