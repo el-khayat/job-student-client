@@ -77,6 +77,7 @@ const Profile = () => {
       }
     };
 
+    
     axios
     .patch(`http://localhost:9999/user/${curentUser}`, data, config)
     .then((res) => {
