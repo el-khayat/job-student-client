@@ -26,7 +26,7 @@ class Avi extends React.Component {
           <div onMouseEnter={this.handleClick}>
                   
         <Card className='card-avi'>
-          <Card.Img variant="top" src={Image} className='imag-avi' />
+          <Card.Img variant="top" src={`http://localhost:9999/images/${this.props.Image}`} className='imag-avi' />
           <Card.Body>
             <Card.Title>{this.props.prenom +" "+this.props.nom}</Card.Title>
 

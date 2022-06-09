@@ -11,11 +11,12 @@ const PostP = () => {
  }, []);
 
   const postRouter = async() =>{
-       const res = await axios.get('http://localhost:9999/post');
+       const res = await axios.get('http://localhost:9999/PostProf');
        if (res.status === 200){
            setData(res.data)
        }
   };
+
   const deleteUser = async (id) => {
    if(window.confirm ("vous voulez supprimer ce poste?")){
 
