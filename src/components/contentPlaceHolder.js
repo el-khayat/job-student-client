@@ -8,7 +8,7 @@ const card = ()=> {
 
   return (
 <div class="card-M">
-
+{/* master do an change */}
 <div class="author">
   <div class="profile-img animated-bg" id="profile_img">&nbsp;</div>
   <div class="author-info">

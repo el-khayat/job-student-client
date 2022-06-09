@@ -11,22 +11,13 @@ const PostP = () => {
  }, []);
 
   const postRouter = async() =>{
-       const res = await axios.get('http://localhost:9999/post');
+       const res = await axios.get('http://localhost:9999/PostProf');
        if (res.status === 200){
            setData(res.data)
        }
   };
-  const deleteUser = async (id) => {
-   if(window.confirm ("vous voulez supprimer ce poste?")){
 
-      const res = await axios.delete( `http://localhost:9999/post/${id}`)
-      if (res.status === 200){
-        toast.success(res.data);
-        
-    } 
-        
-   } 
-}
+
   return (
     <div className="contentt">
           <h1 className="hood  "   width="170"  height="30"> Postes  &nbsp;&nbsp;&nbsp;   Professeurs</h1>
@@ -46,9 +37,6 @@ const PostP = () => {
           <h4 className="lead text-secondary "> Etudiante de l'ENSA Tetouan</h4>
                         
                          
-         <Link to={'/posts/put/:1'}>
-         <button> Modifier</button> </Link>  &nbsp;&nbsp;&nbsp;
-                       <button onClick={() => deleteUser(item.id)}> Supprimer</button>
                  
           </div>
           </div>  
