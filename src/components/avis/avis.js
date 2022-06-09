@@ -14,7 +14,7 @@ const Avis = ({profileId}) => {
   // hooks
   useEffect( () =>{
     getAvis();
- }, []);
+ }, [profileId]);
 
 
 // functions 

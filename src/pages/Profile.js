@@ -25,7 +25,7 @@ const Profile = () => {
   // states
   const [user, setUser] = useState({});
   const [avi, setAvi] = useState("");
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [noAvatar, setNoAvatar] = useState(false);
   const [image, setImage] = useState("");
   const [src, setsrc] = useState("");
@@ -46,14 +46,14 @@ const Profile = () => {
     
     getUser();
 
-  }, [image]);
+  }, [image,id,src]);
 
   const getUser = async () => {
     axios.get(`http://localhost:9999/user/${id}`)
    .then(res =>{
      setUser(res.data[0]);
      setsrc(`http://localhost:9999/images/${res.data[0].Image}`);
-     res.data[0].Image ? setNoAvatar(true) : setNoAvatar(false) ;
+     res.data[0].Image== undefined ? setNoAvatar(true) : setNoAvatar(false) ;
      if(isCurentUser) sessionStorage.setItem("user", JSON.stringify(res.data[0]));
 
 
@@ -77,7 +77,7 @@ const Profile = () => {
       }
     };
 
-    
+
     axios
     .patch(`http://localhost:9999/user/${curentUser}`, data, config)
     .then((res) => {
@@ -140,7 +140,7 @@ const Profile = () => {
                 <img
                   className="profileUserImg-image"
                   for="photo-upload"
-                  src={noAvatar ? src:noAvatare}
+                  src={!noAvatar ? src:noAvatare}
                   alt=""
                   />
                 <AddPhotoAlternate className="editing"/>
