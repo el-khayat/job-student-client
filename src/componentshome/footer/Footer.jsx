@@ -17,7 +17,7 @@ export default function Footer() {
     bgcolor="text.secondary"
      color="white">
         <Container maxWidth="lg">
-          <Grid container spacing={5}>
+          <Grid container style={{justifyContent: "space-between"}} spacing={5}>
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1} color="rosybrown" > A propos de nous</Box>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -29,7 +29,7 @@ export default function Footer() {
                 </Box>
 
             </Grid>
-            <Grid item xs={12} sm={4}>
+            {/* <Grid item xs={12} sm={4}>
               <Box borderBottom={1} color="rosybrown">  Compte</Box>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Box>
@@ -46,7 +46,7 @@ export default function Footer() {
 
               
 
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} sm={4}>
               <Box borderBottom={1} color="rosybrown"> Suivez-nous</Box>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

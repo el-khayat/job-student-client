@@ -120,7 +120,7 @@
   position: relative;
   width: 80px;
   height: 80px;
-  border: 3px solid black;
+  border: 1px solid black;
   margin: 0;
   padding: 0;
 }
@@ -205,11 +205,11 @@
   min-height: fit-content ;
   background-color:#fff ;
   display:  flex ;
-  align-items: center; 
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
   margin:20px;
   justify-content: space-around;
-  background: url(https://img.myloview.com/posters/distressed-black-texture-dark-grainy-texture-on-white-background-dust-overlay-textured-grain-noise-particles-rusted-white-effect-grunge-design-elements-vector-illustration-eps-10-700-267902116.jpg);
 }
 .container1{
     
@@ -217,11 +217,10 @@
   min-height: fit-content ;
   background-color:#fff ;
   display:  flex ;
-  align-items: center; 
+  align-items: flex-start;
   padding: 20px;
   margin:20px;
   justify-content: space-around;
-  background: url(https://i.pinimg.com/236x/8b/d7/8e/8bd78e2f8c866f38c63c7ae77b80b360.jpg);
   
 }
 
@@ -229,18 +228,18 @@
 
 
 .containerr{
-  background: url(https://img.myloview.com/posters/distressed-black-texture-dark-grainy-texture-on-white-background-dust-overlay-textured-grain-noise-particles-rusted-white-effect-grunge-design-elements-vector-illustration-eps-10-700-267902116.jpg);/*  https://previews.123rf.com/images/malven/malven1710/malven171000150/88835161-white-abstract-texture-crumpled-paper-closeup-for-a-background-or-for-wallpaper.jpg */
   width: 100%;
   /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0V-atD87fURKIq4i9ijtDcRs6Civoc3UMA&usqp=CAU*/
   min-height: fit-content ;
   background-color:#fff ;
   display:  flex ;
-  align-items: center; 
+  align-items: flex-start;
   padding: 20px;
   margin:   20px;
   justify-content: space-around;
   border: 1px solid ivory;
-  border-radius: 25px;
+  border-radius: 5px;
+  box-shadow: ;
 }
 .containerradd{
   /* background: url(https://img.wattpad.com/69762b9fb0872488cda3327c0356d99ace1d74c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f476f736d33443143307a4a6741773d3d2d3739383538363735322e313564313932653861663531326661323534353134313832313730392e676966); https://previews.123rf.com/images/malven/malven1710/malven171000150/88835161-white-abstract-texture-crumpled-paper-closeup-for-a-background-or-for-wallpaper.jpg */

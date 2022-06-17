@@ -1,6 +1,6 @@
 // import {  Logout } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,NavLink, useNavigate } from "react-router-dom";
 // import logoProfile from "../../pages/noAvatar.jpg";
 // import profileImg from "../../assets/logo-job-students2.png";
 
@@ -25,7 +25,11 @@ const NavBar = () => {
   // const [user,setUser] = useState(false);
 
   // setUser(Boolean(sessionStorage.getItem("userId")));
-
+  // const styleA = {
+  //     color: "#3fefae",
+  //     borderBottom: "2px solid #cce542"
+  //   }
+  
   const user = Boolean(sessionStorage.getItem("userId"));
   const navigate = useNavigate();
 
@@ -33,7 +37,15 @@ const NavBar = () => {
     return (
       <>
         <li className="nav-item">
-          <Link className="nav-link" to="/posts/postprof">
+          <NavLink 
+          className="nav-link" 
+          style={({isActive})=> {
+             return {
+               color: isActive ? "#3fefae": "" ,
+               borderBottom: isActive ? "2px solid #cce542":""
+                };
+                }} 
+          to="/posts/postprof">
             <div
               data-bs-toggle="collapse"
               data-bs-target="#main_nav"
@@ -42,11 +54,19 @@ const NavBar = () => {
             >
               Postes Prof{" "}
             </div>
-          </Link>
+          </NavLink>
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/posts/postetudiant">
+          <NavLink className="nav-link"
+          
+          style={({isActive})=> {
+            return {
+              color: isActive ? "#3fefae": "" ,
+              borderBottom: isActive ? "2px solid #cce542":""
+               };
+               }} 
+          to="/posts/postetudiant">
             <div
               data-bs-toggle="collapse"
               data-bs-target="#main_nav"
@@ -55,10 +75,18 @@ const NavBar = () => {
             >
               Postes Etudiant{" "}
             </div>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/posts/mesposts">
+          <NavLink className="nav-link"
+          
+          style={({isActive})=> {
+            return {
+              color: isActive ? "#3fefae": "" ,
+              borderBottom: isActive ? "2px solid #cce542":""
+               };
+               }} 
+          to="/posts/mesposts">
             <div
               data-bs-toggle="collapse"
               data-bs-target="#main_nav"
@@ -67,10 +95,17 @@ const NavBar = () => {
             >
               Mes Postes{" "}
             </div>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/posts/addpost">
+          <NavLink className="nav-link"
+                    style={({isActive})=> {
+                      return {
+                        color: isActive ? "#3fefae": "" ,
+                        borderBottom: isActive ? "2px solid #cce542":""
+                         };
+                         }} 
+           to="/posts/addpost">
             <div
               data-bs-toggle="collapse"
               data-bs-target="#main_nav"
@@ -79,7 +114,7 @@ const NavBar = () => {
             >
               Poster
             </div>
-          </Link>
+          </NavLink>
         </li>
 
         <li className="nav-item dropdown">
@@ -125,15 +160,29 @@ const NavBar = () => {
     return (
       <>
         <li className="nav-item">
-          <Link className="nav-link" to="/singin">
+          <NavLink className="nav-link" 
+                    style={({isActive})=> {
+                      return {
+                        color: isActive ? "#3fefae": "" ,
+                        borderBottom: isActive ? "2px solid #cce542":""
+                         };
+                         }} 
+          to="/singin">
             {" "}
             sing in
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/singup">
+          <NavLink className="nav-link"
+                    style={({isActive})=> {
+                      return {
+                        color: isActive ? "#3fefae": "" ,
+                        borderBottom: isActive ? "2px solid #cce542":""
+                         };
+                         }} 
+          to="/singup">
             sing up
-          </Link>
+          </NavLink>
         </li>
       </>
     );

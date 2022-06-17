@@ -23,10 +23,12 @@ const InformationUser = ({ user }) => {
             <span className="rightbarInfoKey">Niveau Etudiant:</span>
             <span className="rightbarInfoValue">{user?.NiveauEtudiant}</span>
           </div>
+
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Nombre de etudiants:</span>
-            <span className="rightbarInfoValue">20</span>
+            <span className="rightbarInfoKey">Telephone : </span>
+            <span className="rightbarInfoValue">{user.Telephone}</span>
           </div>
+
         </div>
         <div className=""></div>
       </div>

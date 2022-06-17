@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"
 
-import { Box, Grid, Paper } from "@material-ui/core";
+import {Button, CircularProgress, Box, Grid, Paper } from "@material-ui/core";
+// import {  } from "@material-ui/core";
+
+
 import { styles } from "../common/styles";
 import {
-  renderButton,
   renderInputField,
-  renderSelect,
   renderText,
 } from "../common/DisplayComponent";
 
@@ -23,25 +24,31 @@ const Step3 = ({
   let navigate = useNavigate();
   // const host = "192.168.43.146" ;
   const host = "localhost"
+
+  const [isLoading,setLoading] = useState(false)
  const  {Nom ,Prenom, Adresse,email,Telephone,Password,NiveauEtudiant,ville} = state.data
   
  const submit = async ()=>{
-     axios.post(`http://${host}:9999/singup`,{
-      Nom,
-      Prenom,
-      Adresse,
-      Password,
+   setLoading(true)
+   axios.post(`http://${host}:9999/singup`,{
+     Nom,
+     Prenom,
+     Adresse,
+     Password,
       email,
       Telephone,
       NiveauEtudiant,
       ville
-
+      
     }).then((res)=>{
+      setLoading(false)
       console.log(state.data);
       console.log("singin ");
+      
       navigate("/singin")
     })
     .catch((err)=>{
+      setLoading(false)
       console.log("err is",err.response);
     })
 
@@ -76,31 +83,53 @@ const Step3 = ({
     value: state.data
   })}
 </Grid>
+
 </Grid>
 
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
 
         <Grid item style={{width:"80%",marginLeft:"auto",marginRight:"auto"}}>
+          
+          
           {renderInputField({
             state,
             name: "Password",
             label: " Password",
+            type:"password",
             onChange: handleChange,
             width:"80%"
           })}
+
+
+
+
+
+
+
+
+
+
+
         </Grid>
       </Grid>
 
       <Grid container component={Box} justify='flex-end' mt={2} p={2}>
+
         <Box ml={2}>
-          {renderButton({
-            label: "Back",
-            color: "default",
-            onClick: handlePrev,
-          })}
-        </Box>
-        <Box ml={2}>
-          {renderButton({ label: "Sing up", onClick: submit })}
+          {/* {renderButton({ label: "Sing up", onClick: submit })} */}
+<Button
+  variant= "outlined"
+  color="primary"
+  onClick={submit}>
+
+          {!isLoading ? (
+            "sing up "
+            ) : 
+            (              <CircularProgress size={30} style={{ color: "#96d0d98c" }} />
+            )
+          }
+</Button>
+
         </Box>
       </Grid>
     </Paper>

@@ -89,13 +89,16 @@ const Addposte = () => {
       >
         <label htmlFor="titre">Titre</label>
         <input
-          type="text"
+          type="textarea"
           id="titre"
           name="titre"
           placeholder="Ex: Professeur de math"
           value={titre}
           onChange={(e) => setTitre(e.target.value)}
-        ></input>
+        >
+
+        </input>
+        <br/>
         <label htmlFor="commentaire">commentaire</label>
         <input
           type="textarea"
