@@ -25,7 +25,7 @@ const Profile = () => {
   // states
   const [user, setUser] = useState({});
   const [avi, setAvi] = useState("");
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const [noAvatar, setNoAvatar] = useState(false);
   const [image, setImage] = useState("");
   const [src, setsrc] = useState("");
@@ -169,9 +169,7 @@ const Profile = () => {
                 {user?.Nom + " " + user?.Prenom}{" "}
 
               </h4>
-              <span className="profileInfoDesc">
-                {user?.Matiere ? "prof de  " + user?.Matiere : "phisique"}
-              </span>
+
             </div>
           </div>
           <div className="profileRightBottom">

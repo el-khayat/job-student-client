@@ -4,12 +4,16 @@ import './myposts.scss'
 import {toast} from "react-toastify";
 import ContentPlaceHolder from "../../components/contentPlaceHolder"
 import Search from "../../components/Search/Search"
+import {
+  LocationOnSharp,
+} from "@material-ui/icons";
 
 const Myposts = () => {
 
 const [postP, setPostP] = useState([]);
 const [postE, setPostE] = useState([]);
 const [posts, setPosts] = useState([]);
+
 const [filter, setFilter] = useState("");
 const [isloading, setLoading] = useState(true);
 
@@ -100,27 +104,26 @@ if (  postE.includes(post)) {
                           return post.commentaire.includes(query);
                          })
                          .map((item, index ) => (
-                            <div className="testimonialss" key={item.id}>
-                         <div className="containerr">
-                                       <div>
-                                          <img className="imgg" src="https://www.legalloromain.net/wp-content/uploads/2020/06/Jeune-Fille-Etudiante-900x579-1.jpg" alt='ff'/>
-                                       </div>
-                                       &nbsp;&nbsp;&nbsp;
-                          
-          <div className="textt">
-                         <h3  className="ff"> {item.user?.Nom}  {item.user.Prenom} </h3> 
-                         <h4  className="ff">    {item.user.ville} </h4>
-                         <h4  className="ff"> {item.titre}</h4>
-                        <p>{item.commentaire}  </p>
-                        <button> Modifier</button>  &nbsp;&nbsp;&nbsp;
-                        <button onClick={() => deletePost(item)}> Supprimer</button>
-                       
 
-                         
-                       
-                 
-          </div>
-          </div>  
+
+
+           <div style={{width:"85%",marginLeft:"auto",marginRight:"auto"}} key={item.id}>
+
+                   <div className="containerr">
+                        <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
+                            <img className="imgg" src={`http://localhost:9999/images/${item.user.Image}`} alt='ff'/>
+                            <h3 style={{marginLeft:"40px"}}  > {item.user?.Nom}  {item.user.Prenom} </h3> 
+                        </div>
+
+                        <div className="textt" style={{marginTop:"20px"}}>
+                              <h4  className="ff">  <LocationOnSharp />  {item.user.ville} </h4>
+                              <h4  className="ff"> {item.titre}</h4>
+                              <p>{item.commentaire}  </p>
+                              <button className="button" style={{transition:"0.5s !important"}} onClick={() => deletePost(item)}> Supprimer</button>
+                        </div>
+                  </div>  
+
+
            </div>
                       )
                       )

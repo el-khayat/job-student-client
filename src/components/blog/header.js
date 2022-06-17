@@ -4,7 +4,7 @@ import {Jumbotron, Carousel} from 'react-bootstrap'
 const head = () => {
   return (
 
-      <Carousel style={{marginTop: "21%"}}>
+      <Carousel style={{marginTop: "80px"}}>
   <Carousel.Item interval={3000}>
     <img
       className="d-block w-100"

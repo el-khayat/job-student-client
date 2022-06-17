@@ -16,7 +16,6 @@ import {
   Typography,
   FormControl,
   InputLabel,
-  OutlinedInput,
   InputAdornment,
   IconButton,
   Input
@@ -234,33 +233,6 @@ const Singin = () => {
           </Typography>
 
 
-
-
-
-
-{/* form admin  */}
-<form>
-       <div className="input-container">
-         <label>EmailAdmin : </label>
-         <input type="emailA"
-                name="emailA"
-                value={emailA}
-                onChange={e=> setEmailA(e.target.value)} />
-       </div>
-       <div className="input-container">
-         <label>Mot de Passe : </label>
-         <input type="password" 
-                   name="passwordA"
-                   value={PasswordA}
-              onChange={e=> setPasswordA(e.target.value)}
-          />
-      
-       </div>
-       <div className="button-container">
-         <input type="submit" value="connexion"   onClick={ConnectAdmin}/>
-       </div>
-     </form>
-{/*  */}
 
 
 

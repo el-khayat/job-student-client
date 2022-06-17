@@ -34,7 +34,7 @@ const Avis = ({profileId}) => {
   {
                       !avisLoading ? (
 
-                         avis === [] ? (<p> Aucune avis </p>) :
+                         avis.length < 1 ? (<p> Aucune avis </p>) :
                          avis.map((avi, index ) => (    <Col key={avi.id}> <Avi text={avi.avi} nom={avi.user.Nom} prenom={avi.user.Prenom} Image={avi.user.Image}/> </Col> )
                       ))
                       : null
