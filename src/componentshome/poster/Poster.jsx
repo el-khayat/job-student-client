@@ -50,10 +50,10 @@ const Addposte = () => {
           });
 
           // toast.success("Poste bien ajouter");
-          setTimeout(() => navigate("/posts/postprof"), 500);
+          setTimeout(() => navigate("/posts/mesposts"), 500);
           return res;
         })
-        .catch((err) => toast.error("siiir tn3ess"));
+        .catch((err) => toast.error(" erreur en ajouter poste "));
     }
   };
   const handleSubmitP = (e) => {
@@ -69,10 +69,10 @@ const Addposte = () => {
         })
         .then((res) => {
           toast.success("Poste bien ajouter");
-          setTimeout(() => navigate("/posts/postprof"), 500);
+          setTimeout(() => navigate("/posts/mesposts"), 500);
           return res;
         })
-        .catch((err) => toast.error("siiir tn3ess"));
+        .catch((err) => toast.error("a"));
     }
   };
 
@@ -85,6 +85,7 @@ const Addposte = () => {
           padding: "15px",
           maxWidth: "400px",
           alignContent: "center",
+          background : "#26acd4"
         }}
       >
         <label htmlFor="titre">Titre</label>
@@ -102,15 +103,16 @@ const Addposte = () => {
         <label htmlFor="commentaire">commentaire</label>
         <input
           type="textarea"
+          styte={{background:"#4f8983"}}
           id="commentaire"
           name="commentaire"
-          placeholder="Ex: lololololo"
           value={commentaire}
           onChange={(e) => setCommentaire(e.target.value)}
         />
 
         <input
           type="submit"
+          styte={{background:"#4f8983"}}
           value="poster comme professeur"
           onClick={handleSubmitP}
         />

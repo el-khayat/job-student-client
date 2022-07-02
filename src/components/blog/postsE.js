@@ -50,7 +50,7 @@ const handelSearchChange = (e)=>{
                       .filter(post=>{
                        if(!filter) return true ;
                        const query = filter.toLowerCase();
-                       return post.commentaire.includes(query);
+                       return post.commentaire.toLowerCase().includes(query);
                       })
                       
                       .map((item, index ) => (

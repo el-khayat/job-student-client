@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import './myposts.scss'
+import '../../myposts/myposts.scss'
 import {toast} from "react-toastify";
-import ContentPlaceHolder from "../../components/contentPlaceHolder"
-import Search from "../../components/Search/Search"
+import {Link} from "react-router-dom"
+
+import ContentPlaceHolder from "../../../components/contentPlaceHolder"
+import Search from "../../../components/Search/Search"
 import {
   LocationOnSharp,
 } from "@material-ui/icons";
@@ -34,14 +36,14 @@ const userId = sessionStorage.getItem("userId")
 const host = "localhost" ;
 
   const FpostP = () =>{
-        axios.get(`http://${host}:9999/PostProf/${userId}`)
+        axios.get(`http://${host}:9999/PostProf`)
         .then(res => res.data)
         .then( (postsP) =>{
          setPostP(postsP)
           return postsP;
          })
         .then( postsP =>{
-                    axios.get(`http://${host}:9999/post/${userId}`)
+                    axios.get(`http://${host}:9999/post`)
                        .then(res => res.data)
                        .then( (postsE) =>{
                         setPostE(postsE)
@@ -88,7 +90,7 @@ if (  postE.includes(post)) {
 
   return (
     <div className="contentt">
-      <h1 className='h1a' >Mes  Postes </h1>
+      <h1 className='h1a' >Les postes des utilisateurs</h1>
       <div style={{width:"100%",heigth:"100px"}}> 
        
 <Search onChange={handelSearchChange}/> 
@@ -101,7 +103,7 @@ if (  postE.includes(post)) {
                          .filter(post=>{
                           if(!filter) return true ;
                           const query = filter.toLowerCase();
-                          return post.commentaire.toLowerCase().includes(query);
+                          return post.commentaire.includes(query);
                          })
                          .map((item, index ) => (
 
@@ -110,10 +112,15 @@ if (  postE.includes(post)) {
            <div style={{width:"85%",marginLeft:"auto",marginRight:"auto"}} key={item.id}>
 
                    <div className="containerr">
-                        <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <img className="imgg" src={`http://localhost:9999/images/${item.user.Image}`} alt='ff'/>
-                            <h3 style={{marginLeft:"40px"}}  > {item.user?.Nom}  {item.user.Prenom} </h3> 
-                        </div>
+                        
+                           <Link to={`/profile/${item.user.id}`} style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
+                               <div>
+                                  <img className="imgg" src={`http://localhost:9999/images/${item.user.Image}`} alt='ff'/>
+                              </div>
+                               <div>
+                                  <h3 style={{marginLeft:"40px"}}  > {item.user?.Nom}  {item.user.Prenom} </h3> 
+                                 </div>
+                            </Link>
 
                         <div className="textt" style={{marginTop:"20px"}}>
                               <h4  className="ff">  <LocationOnSharp />  {item.user.ville} </h4>

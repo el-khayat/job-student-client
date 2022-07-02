@@ -147,7 +147,7 @@ const NavBar = () => {
             <li>
               <button className="dropdown-item item-sub" onClick={logout}>
                 {" "}
-                Log out{" "}
+                Déconnecter {" "}
               </button>
             </li>
           </ul>
@@ -169,7 +169,7 @@ const NavBar = () => {
                          }} 
           to="/singin">
             {" "}
-            sing in
+            Se connecter
           </NavLink>
         </li>
         <li className="nav-item">
@@ -181,7 +181,7 @@ const NavBar = () => {
                          };
                          }} 
           to="/singup">
-            sing up
+            S'inscrire
           </NavLink>
         </li>
       </>

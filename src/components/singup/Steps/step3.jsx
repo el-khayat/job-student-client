@@ -61,7 +61,7 @@ const Step3 = ({
     <Paper style={styles.steps}>
       <Box mt={2} mb={2}>
         {renderText({
-          label: "Professional Details",
+          label: "Compte",
           type: "h6",
           color: "textPrimary",
           align: "center",
@@ -94,7 +94,7 @@ const Step3 = ({
           {renderInputField({
             state,
             name: "Password",
-            label: " Password",
+            label: " Mot de passe",
             type:"password",
             onChange: handleChange,
             width:"80%"
@@ -117,18 +117,27 @@ const Step3 = ({
 
         <Box ml={2}>
           {/* {renderButton({ label: "Sing up", onClick: submit })} */}
-<Button
+          
+          <Button
+  variant= "outlined"
+  color="primary"
+  onClick={handlePrev}>
+ Retour
+</Button>
+&nbsp;&nbsp;&nbsp;
+          <Button
   variant= "outlined"
   color="primary"
   onClick={submit}>
 
           {!isLoading ? (
-            "sing up "
+            "S'inscrire "
             ) : 
             (              <CircularProgress size={30} style={{ color: "#96d0d98c" }} />
             )
           }
 </Button>
+
 
         </Box>
       </Grid>

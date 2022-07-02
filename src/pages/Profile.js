@@ -180,7 +180,7 @@ const Profile = () => {
 
 
       <div className="cont-avi-ape">
-        <Avis profileId={id} />
+        <Avis profileId={id} render={avi}/>
 
         {!isCurentUser && params.id && (
           <div className="form-avis">

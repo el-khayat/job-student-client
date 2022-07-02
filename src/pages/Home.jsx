@@ -33,7 +33,7 @@ const Home = () => {
             matier="francais"
             ville="casablanca"
             description="j'offre des cours de soutien en francais. Bienvenue."
-            ecole=""
+            ecole="faculté de lettre Martil"
           />
           <Appercu
             image={img}
@@ -41,7 +41,7 @@ const Home = () => {
             matier="mathematique"
             ville="chefchaouen"
             description="Je suis un enseignant qui fait des cours supplémentaires de mathématiques à domicile(primaire et collège)"
-            ecole=""
+            ecole="ENSA Tetouan"
           />
           <Appercu
             image=""
@@ -49,7 +49,7 @@ const Home = () => {
             matier="mathématiques"
             ville="fes"
             description="j'offre des cours de soutien en mathématiques et phisique. Bienvenue."
-            ecole=""
+            ecole="faculté de science Tetouan"
           />
           <Appercu
             image=""
@@ -57,7 +57,7 @@ const Home = () => {
             matier="العربية "
             ville="tanger"
             description="قديم حصص الدعم لجميع مستويات الإبتدائي في جميع المواد مراجعة للامتحان الموحد  السادس"
-            ecole=""
+            ecole="faculté de lettre Martil"
           />
         </div>
 
