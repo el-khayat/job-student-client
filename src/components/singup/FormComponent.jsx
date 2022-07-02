@@ -35,9 +35,9 @@ class FormComponent extends Component {
     },
     errors: {},
     steps: [
-      { label: "Personelle Bio" },
+      { label: "Informations personnelles" },
       { label: "Education" },
-      { label: "Professional" },
+      { label: "Compte" },
     ],
     stepCount: 0,
   };
@@ -123,7 +123,7 @@ class FormComponent extends Component {
                 {renderText({
                   type: "h6",
                   color: "primary",
-                  label: " Signup ",
+                  label: " S'inscrire ",
                   align: "center",
                 })}
               </Box>

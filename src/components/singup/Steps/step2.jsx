@@ -13,7 +13,7 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
     <Paper style={styles.steps}>
       <Box mt={2} mb={2}>
         {renderText({
-          label: "A Bit About Education",
+          label: "Education",
           type: "h6",
           color: "textPrimary",
           align: "center",
@@ -27,10 +27,10 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
             name: "NiveauEtudiant",
             label: "Niveau d'étude",
             options: [
-              { key: "premaire", value: "premaire" },
+              { key: "primaire", value: "premaire" },
               { key: "collége", value: "college" },
               { key: "lycée", value: "lycee" },
-              { key: "étude supperieus", value: "superieurs" },
+              { key: "Etudes Supérieures ", value: "superieurs" },
             ],
             onChange: handleChange,
           })}
@@ -39,7 +39,7 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
           {renderInputField({
             state,
             name: "ville",
-            label: "ville",
+            label: "Ville",
             onChange: handleChange,
           })}
         </Grid>

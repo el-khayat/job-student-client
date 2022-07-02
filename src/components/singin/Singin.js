@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-// import { CircularProgress } from "@material-ui/core";
-// import NoEncryption from "@material-ui/icons/NoEncryption";
-import { Rings } from  'react-loader-spinner'
-
 import axios from "axios";
+import {BsFillXOctagonFill } from 'react-icons/bs';
+import { FcBusinessContact } from "react-icons/fc";
+import { AiOutlineMail } from "react-icons/ai";
+import {BsFillLockFill} from "react-icons/bs";
+import { toast } from 'react-toastify';
 import "./Singin.css";
-import loginSvg from "../../assets/login.svg";
+//import loginSvg from "../../assets/login.svg";
 import {
   CircularProgress,
   Grid,
@@ -16,6 +17,7 @@ import {
   Typography,
   FormControl,
   InputLabel,
+  OutlinedInput,
   InputAdornment,
   IconButton,
   Input
@@ -49,6 +51,7 @@ const Singin = () => {
   const [isLoading, setLoading] = useState(false);
   const [emailA,setEmailA] = useState("")
   const [PasswordA,setPasswordA] = useState("")
+  const [popup, setPop] = useState(false);
 
   const paperStyle = {
     padding: 20,
@@ -118,25 +121,35 @@ const Singin = () => {
     setShowPassword(!showPassword)
   }
 
-  const ConnectAdmin=(e) => {
-
+  const loginA =  (e) => {
     e.preventDefault(); 
-    if(emailA === 'nazik@gmail.com' && PasswordA === 'nana')
-    {
-      navigate("/siladmin");
-    } else{
-      setError("les informqtions de admin incorrect ")
-    }
-   
-  };
+    if(emailA ==='admin&mohamed' && PasswordA === 'admin'){
+    
+      navigate('/siladmin');
 
+    }else
+    {
+      
+      toast.error("vous étes pas l'admin!"); 
+    }
+  
+    
+  };
+  const handleClickOpen=()=>{
+    setPop(!popup);
+  }
+  const closePopup=()=>{
+   setPop(false);
+  }
+
+  
 
 
 
   return (
     <div className="singin">
       <div className="logoLogin" style={{ height: 500, width: 500 }}>
-        <img src={loginSvg} alt="qq" className="logoSvg" />
+        {/* <img src={loginSvg} alt="qq" className="logoSvg" /> */}
       </div>
       {/* <Particles /> */}
       <Grid >
@@ -145,7 +158,7 @@ const Singin = () => {
             <Avatar style={avatarStyle}>
               <LockOutlinedIcon color="red" />
             </Avatar>
-            <h2 style={h1Style}>Sign In</h2>
+            <h2 style={h1Style}>Se connecter</h2>
           </Grid>
 
           {error ? (
@@ -178,16 +191,17 @@ const Singin = () => {
             label="email"
             type="text"
             onChange={(e) => setEmail(e.target.value)}
-            // fullWidth
+             fullWidth
           />
 
         <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="standard-adornment-password">Mot de passe</InputLabel>
           <Input
           error={passwordError}
             id="standard-adornment-password"
             type={showPassword ? 'text' : 'password'}
             value={Password}
+            fullWidth
             onChange={(e) => setPassword(e.target.value)}
             endAdornment={
               <InputAdornment position="end">
@@ -204,10 +218,7 @@ const Singin = () => {
         </FormControl>
 
           <br />
-          <FormControlLabel
-            control={<Checkbox name="checkedB" color="primary" />}
-            label="Remember me"
-          />
+          
           <br />
           <Button
             type="submit"
@@ -218,21 +229,76 @@ const Singin = () => {
             onClick={login}
           >
             {!isLoading ? (
-              "sing in "
-            ) : 
-(              <CircularProgress size={30} style={{ color: "#96d0d98c" }} />
-)
-            }
+              "Connecter "
+            ) : (
+              <CircularProgress size={30} style={{ color: "#96d0d98c" }} />
+
+            )}
           </Button>
 
 
 
           <Typography>
             {" "}
-            Do you have an account ?<Link to="/singup">Sign Up</Link>
+            Tu es déja un compte ?<Link to="/singup">S'inscrire</Link>
           </Typography>
 
 
+
+
+
+
+{/* form admin  */}
+<div className='App'>
+<button onClick={handleClickOpen}> Administrateur</button>
+  {popup?
+  
+    <div className='popup'>
+    <div className="close"><h2 onClick={closePopup}> <BsFillXOctagonFill /> </h2></div>
+     <div className="mainA">
+       <div>
+         <div className="icons">
+           <div className="container-icons">
+
+
+           </div>
+
+
+         </div>
+         <div>
+           <h1>Admin</h1>
+           <div>
+             <div className="emailA"> <AiOutlineMail /> </div>
+             <input type="text" placeholder="Email" className="nameA" 
+              onChange={(e) => setEmailA(e.target.value)}
+             />
+           </div>
+           <div className="second-inputA">
+             <div className="emailA">  <BsFillLockFill /> </div>
+             <input type="password" placeholder="Mot de passe" className="nameA"
+              onChange={(e) => setPasswordA(e.target.value)}
+             />
+           </div>
+          <div className="login-buttonA">
+          <button  onClick={loginA}>connecter</button>
+          </div>
+           
+            
+ 
+         </div>
+       
+       
+
+     </div>
+    </div>
+     
+     </div>
+
+:""}
+
+</div>
+
+{/*  */}
 
 
 

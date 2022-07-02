@@ -9,15 +9,35 @@ import Singup from "./pages/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Addpost from "./pages/addpost";
 import Mesposts from "./pages/meposts";
+import Admin from "./pages/Adminpage"
+
+import Intro from "./componentshome/admin/introadmin/intro"
+import Postes from "./componentshome/admin/poste/poste"
+import Util from "./componentshome/admin/utilisateurs/utilisateurs"
+// import Commentaire from "./componentshome/admin/introadmin/intro"
+
 // import  AddP from "./components/blog/addposte"
 // import  AddE from "./components/blog/addposte"
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/">
         <Routes>
           <Route path="/" element={<Home />} />
+
+
+
+<Route path="/" element={<Home/>} />
+                 
+                  <Route  path="/siladmin" element={<Admin/>} >
+                                    <Route  index element={<Intro/>} />
+                                    <Route  path="listeP" element={<Postes/>} />
+                                    <Route  path="listeU" element={<Util/>} />
+                   </Route>
+
+
+
           <Route path="/singin" element={<Singin />} />
           <Route path="/singup" element={<Singup />} />
 

@@ -17,3 +17,89 @@
 .backgroundLigner{
     background: rgba(0,0,0,0) linear-gradient(135deg,#ededed 0,#26acd4 100%) repeat scroll 0 0;
 }
+.App{
+    text-align: center;
+}
+
+.popup{
+    
+    height: 10px;
+    width: 25%;
+    background-color: black;
+    position: absolute;
+    top: 15%;
+    right: 70%;
+}
+
+.mainA {
+    text-align: center;
+    justify-content: center;
+    display: flex; 
+    padding-top: 90px;
+    padding-bottom: 85px;
+    background-color: white
+    
+ }
+  
+  .icons {
+      padding-top: 20px;
+      justify-content: center;
+      display: flex;
+    }
+  .container-icons {
+    background-color: rgb(223, 221, 221); 
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+  }
+  .profileA {
+    height: 100px;
+    width: 100px;
+    border-radius: 130px;
+  } 
+
+  .nameA{
+      width: 300px;
+      height: 50px;
+      border-radius: 60px;
+      box-shadow: inset 0px 0px 25px 0px #888;
+      border: none;
+      outline: none;
+      background-color: #fff;
+  }
+
+  .emailA{
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      padding: 14px 0 0 25px;
+  }
+
+  .nameA{
+      padding-left: 70px;
+      font-size: 20px;
+  }
+  .second-inputA{
+      padding-top: 20px;
+  }
+   .close{
+    
+    width: 1px;
+    height: 1px;
+   }
+
+  button{
+      width: 180px;
+      height: 50px;
+      border-radius: 80px;
+      background-color: mediumblue;
+      color: white;
+      font-size: 15px;
+      border: none;
+  }
+  .login-buttonA{
+      padding-top: 25px;
+  }

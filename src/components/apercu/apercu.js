@@ -120,7 +120,7 @@ export default function Card({
 
               <p className="lead text-secondary ">
                 {" "}
-                Etudiante de l'ENSA Tetouan
+               {ecole} 
               </p>
             </div>
           </div>

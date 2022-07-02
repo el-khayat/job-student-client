@@ -1,0 +1,53 @@
+@import "../../../global.scss";
+.introA {
+    background-color: mediumaquamarine;
+    display: flex;
+    height: 100vh;
+  
+    .leftA {
+      flex: 0.4;
+      overflow: hidden;
+  
+      .imgContainerA {
+        width: 100px;
+        height: 200px;
+    
+        border-radius: 80%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        float: right;
+  
+        
+  
+      }
+    }
+    .rightA {
+      flex: 0.5;
+      position: relative;
+  
+      .wrapperA {
+        width: 100%;
+        height: 100%;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        
+  
+        h1 {
+          font-size: 60px;
+          margin: 10px 0;
+          font-style: oblique;
+  
+          
+        }
+        h2 {
+          font-size: 35px;
+        }
+       
+      }
+      
+    }
+  }

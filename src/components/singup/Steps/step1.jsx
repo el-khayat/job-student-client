@@ -13,7 +13,7 @@ const Step1 = ({ state, handleChange, handleNext }) => {
     <Paper style={styles.steps}>
       <Box mt={2} mb={2}>
         {renderText({
-          label: "Please Fill personal Data",
+          label: "Entrer vos informations",
           type: "h6",
           color: "textPrimary",
           align: "center",
@@ -33,7 +33,7 @@ const Step1 = ({ state, handleChange, handleNext }) => {
           {renderInputField({
             state,
             name: "Prenom",
-            label: "Prenom",
+            label: "Prénom",
             onChange: handleChange,
           })}
         </Grid>
@@ -45,7 +45,7 @@ const Step1 = ({ state, handleChange, handleNext }) => {
             name: "sexe",
             label: "sexe",
             options: [ 
-              { key: "home", value: "home" },
+              { key: "homme", value: "home" },
               { key: "femme", value: "femme" },
             ],
             onChange: handleChange,
@@ -57,7 +57,7 @@ const Step1 = ({ state, handleChange, handleNext }) => {
           {renderInputField({
             state,
             name: "Telephone",
-            label: "Telephone",
+            label: "Télèphone",
             onChange: handleChange,
           })}
         {/* </Grid> */}

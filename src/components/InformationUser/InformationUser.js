@@ -3,7 +3,7 @@ const InformationUser = ({ user }) => {
   return (
     <>
       <div className="contenairInf">
-        <h4 className="rightbarTitle">User information</h4>
+        <h4 className="rightbarTitle">Informations d'utilisateurs</h4>
         <br />
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
@@ -20,12 +20,12 @@ const InformationUser = ({ user }) => {
             </span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Niveau Etudiant:</span>
+            <span className="rightbarInfoKey">Niveau d'étude:</span>
             <span className="rightbarInfoValue">{user?.NiveauEtudiant}</span>
           </div>
 
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Telephone : </span>
+            <span className="rightbarInfoKey">Téléphone : </span>
             <span className="rightbarInfoValue">{user.Telephone}</span>
           </div>
 

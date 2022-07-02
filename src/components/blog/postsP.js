@@ -37,7 +37,7 @@ const handelSearchChange = (e)=>{
 
   return (
     <div className="contentt">
-          <h1 className="hood  "   width="170"  height="30"> Postes  &nbsp;   Professeurs</h1>
+          <h1 className="hood  "   width="170"  height="30"> Postes    Professeurs</h1>
           <div style={{width:"100%",heigth:"100px"}}> 
        
        <Search onChange={handelSearchChange}/> 
@@ -50,7 +50,7 @@ const handelSearchChange = (e)=>{
                       .filter(post=>{
                        if(!filter) return true ;
                        const query = filter.toLowerCase();
-                       return post.commentaire.includes(query);
+                       return post.commentaire.toLowerCase().includes(query);
                       })
                       
                       .map((item, index ) => (

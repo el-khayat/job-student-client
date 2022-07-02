@@ -229,88 +229,87 @@
 
 .containerr{
   width: 100%;
-  /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0V-atD87fURKIq4i9ijtDcRs6Civoc3UMA&usqp=CAU*/
   min-height: fit-content ;
-  background-color:#fff ;
+  background-color: white;
   display:  flex ;
-  align-items: flex-start;
-  padding: 20px;
-  margin:   20px;
-  justify-content: space-around;
-  border: 1px solid ivory;
-  border-radius: 5px;
-  box-shadow: ;
-}
-.containerradd{
-  /* background: url(https://img.wattpad.com/69762b9fb0872488cda3327c0356d99ace1d74c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f476f736d33443143307a4a6741773d3d2d3739383538363735322e313564313932653861663531326661323534353134313832313730392e676966); https://previews.123rf.com/images/malven/malven1710/malven171000150/88835161-white-abstract-texture-crumpled-paper-closeup-for-a-background-or-for-wallpaper.jpg */
-  width: 60%;
-  /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0V-atD87fURKIq4i9ijtDcRs6Civoc3UMA&usqp=CAU*/
-  min-height: fit-content ;
-  background-color:#fff ;
-  display:  flex ;
-  align-items: center; 
-  padding: 70px;
-  margin:   70px;
-  justify-content: space-around;
-  border: 1px solid rgb(8, 8, 6);
-  border-radius: 25px;
-}
+  flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin:20px;
+    justify-content: space-around;
+  
+    
+  }
+  .containerradd{
+    /* background: url(https://img.wattpad.com/69762b9fb0872488cda3327c0356d99ace1d74c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f476f736d33443143307a4a6741773d3d2d3739383538363735322e313564313932653861663531326661323534353134313832313730392e676966); https://previews.123rf.com/images/malven/malven1710/malven171000150/88835161-white-abstract-texture-crumpled-paper-closeup-for-a-background-or-for-wallpaper.jpg */
+    width: 60%;
+    /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0V-atD87fURKIq4i9ijtDcRs6Civoc3UMA&usqp=CAU*/
+    min-height: fit-content ;
+    background-color:#fff ;
+    display:  flex ;
+    align-items: center; 
+    padding: 70px;
+    margin:   70px;
+    justify-content: space-around;
+    border: 1px solid rgb(8, 8, 6);
+    border-radius: 25px;
+  }
 
-.text{
-    
-  flex: 0,5;
-}
-.ff{
-    
-  color:navy;
-  font-style: italic;
-}
-.f{
-  color: teal;
-  font-style: italic;
-  font-weight: bold;
-}
-.fff{
-  background-color: rgb(75, 240, 240);
-  width: 100%;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-}
-.fff:hover{
-  background-color: rgb(43, 147, 147);
-  width: 100%;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  transform: none;
-  transition: all 0.9s  ;
-}
-.inp-titre{
-  width: 70%;
-  height: 30px;
-  border-bottom:1px solid red ;
-  margin-left: 10px;
-}
-.text-muted{
-  color: yellow;
-}
-.post{
-  color: brown;
-}
-button {
-  background-color: purple;
-  color: #fff;
-  border: 1px purple solid;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
-  overflow: hidden;
-  margin: 10px 0;
-  position: relative;
-}
+  .text{
+      
+    flex: 0,5;
+  }
+  .ff{
+      
+    color:navy;
+    font-style: italic;
+  }
+  .f{
+    color: teal;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .fff{
+    background-color: rgb(75, 240, 240);
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+  }
+  .fff:hover{
+    background-color: rgb(43, 147, 147);
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transform: none;
+    transition: all 0.9s  ;
+  }
+  .inp-titre{
+    width: 70%;
+    height: 30px;
+    border-bottom:1px solid red ;
+    margin-left: 10px;
+  }
+  .text-muted{
+    color: yellow;
+  }
+  .post{
+    color: brown;
+  }
+  button {
+    background-color: purple;
+    color: #fff;
+    border: 1px purple solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+  }

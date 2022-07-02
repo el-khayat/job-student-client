@@ -4,7 +4,7 @@ import Avi from "../avi/avi"
 import axios from 'axios'
 
 import {Container,Row,Col} from 'react-bootstrap'
-const Avis = ({profileId}) => {
+const Avis = ({profileId,render}) => {
 
   // states 
   const [avis,setAvis]=useState([]);
@@ -14,7 +14,7 @@ const Avis = ({profileId}) => {
   // hooks
   useEffect( () =>{
     getAvis();
- }, [profileId]);
+ }, [profileId,render]);
 
 
 // functions 

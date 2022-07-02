@@ -27,15 +27,7 @@ export default function Description() {
         <h1 className='titree'> A propos de <span ref={textRef}></span> </h1>
         <div className="wrapper">
         
-          <p className='descreption'>Sur mon blog Audrey Tips, le menu principal est celui qui affiche les liens :
-            Commencer ici pour guider vers la page qui vous explique le pourquoi de ce blog,
-              Blog pour retourner à la page principale,naziknnjccjdzjbdcbvehvcvecvehvcudvc uv
-             Contacter Audrey qui renvoie vers le formulaire de contact.
-         Je ferai certainement évoluer le menu prochainement pour y ajouter d’autresSur mon blog Audrey Tips, le menu principal est celui qui affiche les liens :
-            Commencer ici pour guider vers la page qui vous explique le pourquoi de ce blog,
-              Blog pour retourner à la page principale,naziknnjccjdzjbdcbvehvcvecvehvcudvc uv
-             Contacter Audrey qui renvoie vers le formulaire de contact.
-Je ferai certainement évoluer le menu prochainement pour y ajouter</p>
+          <p className='descreption'>Job-Student est une application web  propose de mettre les étudiants universitaires  en relation avec des élèves recherchant un prof de soutien  " de sorte que facilite la tâche de trouver des professeurs compétents   ainsi que  les étudiants universitaires peuvent trouver un travail comme prof particulier qui lui permettra de sélectionner les élèves en fonction du lieu géographique afin d'être pas trop loin de chez d’eux, Donner une première expérience sur son  CV et aussi gagner de l'argent en réalisant une activité peu contraignante . Ils peuvent  communiquer entre eux en utilisant les numéros de téléphone.</p>
         </div>
         
       </div>
